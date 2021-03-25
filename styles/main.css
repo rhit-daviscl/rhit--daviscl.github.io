@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway&display=swap');
+
+:root{
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+    background-color: #5E563C;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+    --body-color: #f75e79;
+    --heading-color: #6A84F7;
+    --contrast-color: #3EDE5B;
+    --outline-border-color: #5E563C;
+}
+
+body{
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    color: var(--body-color);
+}
+
+main{
+    background-color: #f7f3e7;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
+
+h1, body#resume h2{
+    font-family: 'Great Vibes', cursive;
+    color: var(--heading-color);
+}
+
+h1,h2,h3{
+    line-height: 1.2;
+}
+
+a{
+    color:var(--body-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a:hover{
+    color: var(--contrast-color);
+    text-decoration-color: var(--heading-color);
+}
+
+body#about img {height:15em}
+
+p{
+    max-width: 50em;
+}
+
+body{
+    display:grid;
+    grid-template-areas: "head head"
+                         "nav  nav"
+                         "main main"
+                         "foot foot";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+@media screen and (min-width: 28em){
+    body{
+        grid-template-areas: "head head"
+                             "nav main"
+                             "foot foot";
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+body > *{
+    padding-left: var(--horizontal-space);  
+    padding-right: var(--horizontal-space);
+}
+
+body > header{
+    grid-area: head;
+}
+
+body > nav{
+    grid-area: nav;
+}
+
+body > nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body > nav ul li{
+    padding-right: 1rem;
+}
+
+body > main{
+    grid-area: main;
+}
+
+body > footer{
+    grid-area: foot;
+}
+
+header, footer{
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+    color: var(--heading-color);
+}
+
+header h1, footer h1{
+    margin: 0;
+}
+
+body#portfolio ul#portfolioItems{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 28em){
+    body#portfolio ul#portfolioItems li{
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+}
+
+body#portfolio ul#portfolioItems li img{
+    max-width: 100%;
+    max-height: 50%;
+}
