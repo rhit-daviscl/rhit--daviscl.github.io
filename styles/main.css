@@ -3,12 +3,15 @@
 :root{
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
-    background-color: #5E563C;
-    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
     --body-color: #f75e79;
     --heading-color: #6A84F7;
     --contrast-color: #3EDE5B;
     --outline-border-color: #5E563C;
+    --background-color: #f7f3e7;
+    --button-color: #BA9DFA;
+    --button-font-color: black;
+    --button-color-2: black;
+    --button-font-color-2: #BA9DFA; 
 }
 
 body{
@@ -16,10 +19,41 @@ body{
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
     color: var(--body-color);
+    background-color: var(--outline-border-color);
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
+
+.l-colors{
+    --outline-border-color: #BA9DFA;
+    --background-color: #FAD2AA;
+    --body-color: #1B36FA;
+    --heading-color: #57E4FA;
+    --contrast-color: #FAF178;
+    --button-color: #5E563C;
+    --button-font-color: #57E4FA;
+    --button-color-2: black;
+    --button-font-color-2: #BA9DFA; 
+}
+
+.button-switch{
+    background-color: var(--button-color);
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
+
+.button-switch:hover{
+    background-color: var(--button-color-2);
+}
+
+.button-switch span{
+    color: var(--button-font-color);
+}
+
+.button-switch span:hover{
+    color: var(--button-font-color-2);
 }
 
 main{
-    background-color: #f7f3e7;
+    background-color: var(--background-color);
     background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 }
 
